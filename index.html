@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Portfolio Gereja</title>
+    <link rel="stylesheet" href="assets/css/tokens.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">Gereja Portfolio</a>
+            <nav class="nav-links" id="navLinks">
+                <a href="#hero">Beranda</a>
+                <a href="#about">Tentang</a>
+                <a href="#songs">Lagu Sion</a>
+                <a href="#news">Berita</a>
+                <a href="#sabbath">Sekolah Sabat</a>
+                <a href="#liturgy">Liturgi</a>
+                <a href="#attendance">Kehadiran</a>
+                <a href="#gallery">Galeri</a>
+                <a href="#sermons">Khotbah</a>
+                <a href="#bible">Alkitab</a>
+            </nav>
+            <div class="nav-controls">
+                <button id="fontDec" title="Kecilkan Huruf">A-</button>
+                <button id="fontInc" title="Besarkan Huruf">A+</button>
+                <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="container hero-content">
+            <span class="badge">Selamat Datang</span>
+            <h1 id="heroTitle">Memuji Tuhan dan Melayani Bersama</h1>
+            <p id="heroSubtitle">Selamat datang di portal resmi gereja kami. Temukan jadwal ibadah, bahan rohani, dan kegiatan terbaru.</p>
+            <div class="hero-buttons">
+                <a href="#schedule" class="btn btn-primary" id="cta1">Jadwal Ibadah</a>
+                <a href="#attendance" class="btn btn-secondary" id="cta2">Isi Kehadiran</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Container -->
+    <main class="container main-content">
+        <section id="about" class="section">
+            <h2>Tentang Kami</h2>
+            <p>Informasi profil, visi-misi, dan sejarah gereja akan tampil di sini dari database Google Sheets.</p>
+        </section>
+
+        <section id="songs" class="section">
+            <h2>Lagu Sion</h2>
+            <div class="search-box">
+                <input type="text" id="searchSong" placeholder="Cari nomor atau judul lagu...">
+            </div>
+            <div id="songsList" class="card-grid"></div>
+        </section>
+
+        <section id="news" class="section">
+            <h2>Berita Mission Advent</h2>
+            <div id="newsList" class="card-grid"></div>
+        </section>
+
+        <section id="sabbath" class="section">
+            <h2>Pelajaran Sekolah Sabat</h2>
+            <div id="sabbathContent"></div>
+        </section>
+
+        <section id="liturgy" class="section">
+            <h2>Susunan Acara Liturgi</h2>
+            <div id="liturgyTimeline"></div>
+        </section>
+
+        <section id="attendance" class="section">
+            <h2>Daftar Kehadiran Jemaat</h2>
+            <form id="checkinForm" class="form-card">
+                <div class="form-group">
+                    <label for="checkinName">Nama Lengkap</label>
+                    <input type="text" id="checkinName" required placeholder="Masukkan nama Anda">
+                </div>
+                <div class="form-group">
+                    <label for="checkinIbadah">Jenis Ibadah</label>
+                    <select id="checkinIbadah">
+                        <option value="Sekolah Sabat">Sekolah Sabat</option>
+                        <option value="Ibadah Raya">Ibadah Raya</option>
+                        <option value="Doa Tengah Minggu">Doa Tengah Minggu</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Check-In Sekarang</button>
+            </form>
+        </section>
+
+        <section id="gallery" class="section">
+            <h2>Galeri Kegiatan</h2>
+            <div id="galleryGrid" class="masonry-grid"></div>
+        </section>
+
+        <section id="sermons" class="section">
+            <h2>Bahan Khotbah</h2>
+            <div id="sermonsList" class="card-grid"></div>
+        </section>
+
+        <section id="bible" class="section">
+            <h2>Alkitab Digital</h2>
+            <div class="bible-box">
+                <p>Pilih kitab dan pasal untuk membaca firman Tuhan.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Website Portfolio Gereja. Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+
+    <script src="config.js"></script>
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/landing.js"></script>
+</body>
+</html>

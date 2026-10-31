@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', 'Nunito Sans', sans-serif, system-ui;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 60px 0;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', 'Plus Jakarta Sans', sans-serif;
+    margin-bottom: 20px;
+}

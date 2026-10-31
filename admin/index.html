@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Portfolio Gereja</title>
+    <link rel="stylesheet" href="../assets/css/tokens.css">
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+</head>
+<body class="admin-body">
+    <div id="loginScreen" class="login-container">
+        <div class="login-card">
+            <h2>Login Admin</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" id="adminEmail" required>
+                </div>
+                <div class="form-group">
+                    <label>Kata Sandi</label>
+                    <input type="password" id="adminPassword" required>
+                </div>
+                <button type="submit" class="btn btn-primary full-width">Masuk</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="adminDashboard" class="admin-layout" style="display: none;">
+        <aside class="admin-sidebar">
+            <h3>Admin Panel</h3>
+            <ul>
+                <li><a href="#" data-section="dashboard" class="active">Dashboard</a></li>
+                <li><a href="#" data-section="config">Pengaturan Umum</a></li>
+                <li><a href="#" data-section="songs">Lagu Sion</a></li>
+                <li><a href="#" data-section="news">Berita</a></li>
+                <li><a href="#" data-section="sabbath">Sekolah Sabat</a></li>
+                <li><a href="#" data-section="liturgy">Liturgi</a></li>
+                <li><a href="#" data-section="attendance">Kehadiran</a></li>
+                <li><a href="#" data-section="gallery">Galeri</a></li>
+                <li><a href="#" data-section="sermons">Khotbah</a></li>
+                <li><a href="#" id="btnLogout">Keluar</a></li>
+            </ul>
+        </aside>
+        <main class="admin-main">
+            <header class="admin-header">
+                <h2>Kelola Konten Gereja</h2>
+                <button id="btnClearCache" class="btn btn-secondary">Segarkan Cache</button>
+            </header>
+            <div id="adminContentArea">
+                <div class="kpi-grid">
+                    <div class="kpi-card"><h4>Total Jemaat</h4><p id="kpiMembers">0</p></div>
+                    <div class="kpi-card"><h4>Kehadiran</h4><p id="kpiAttendance">0</p></div>
+                    <div class="kpi-card"><h4>Berita Terbit</h4><p id="kpiNews">0</p></div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../config.js"></script>
+    <script src="../assets/js/api.js"></script>
+    <script src="../assets/js/admin.js"></script>
+</body>
+</html>
